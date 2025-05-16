@@ -41,22 +41,23 @@ The **Animal or Object Identifier** system will follow these rules:
 Q1: Does it have feathers?
 ├── Yes → Q2: Can it fly?
 │     ├── Yes → Q3: Does it chirp?
-│     │     ├── Yes → It is a Sparrow.
-│     │     └── No → It is a Hawk.
-│     └── No → It is a Penguin.
+│     │     ├── Yes → 🐦 It is a Sparrow.
+│     │     └── No  → 🦅 It is a Hawk.
+│     └── No  → 🐧 It is a Penguin.
 └── No → Q4: Does it have fur?
       ├── Yes → Q5: Does it bark?
-      │     ├── Yes → It is a Dog.
-      │     └── No → Q6: Does it meow?
-      │           ├── Yes → It is a Cat.
-      │           └── No → It is a Bear.
+      │     ├── Yes → 🐶 It is a Dog.
+      │     └── No  → Q6: Does it meow?
+      │           ├── Yes → 🐱 It is a Cat.
+      │           └── No  → 🐻 It is a Bear.
       └── No → Q7: Does it have scales?
             ├── Yes → Q8: Does it live in water?
-            │     ├── Yes → It is a Fish.
-            │     └── No → It is a Lizard.
+            │     ├── Yes → 🐟 It is a Fish.
+            │     └── No  → 🦎 It is a Lizard.
             └── No → Q9: Does it have smooth skin and live near water?
-                  ├── Yes → It is a Frog.
-                  └── No → It is a Snake.
+                  ├── Yes → 🐸 It is a Frog.
+                  └── No  → 🐍 It is a Snake.
+
 
 ---
 
