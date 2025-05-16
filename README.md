@@ -38,26 +38,25 @@
 The **Animal or Object Identifier** system will follow these rules:
 
 ### Rules
-Q1: Does it have feathers?
-├── Yes → Q2: Can it fly?
-│     ├── Yes → Q3: Does it chirp?
-│     │     ├── Yes → 🐦 It is a Sparrow.
-│     │     └── No  → 🦅 It is a Hawk.
-│     └── No  → 🐧 It is a Penguin.
-└── No → Q4: Does it have fur?
-      ├── Yes → Q5: Does it bark?
-      │     ├── Yes → 🐶 It is a Dog.
-      │     └── No  → Q6: Does it meow?
-      │           ├── Yes → 🐱 It is a Cat.
-      │           └── No  → 🐻 It is a Bear.
-      └── No → Q7: Does it have scales?
-            ├── Yes → Q8: Does it live in water?
-            │     ├── Yes → 🐟 It is a Fish.
-            │     └── No  → 🦎 It is a Lizard.
-            └── No → Q9: Does it have smooth skin and live near water?
-                  ├── Yes → 🐸 It is a Frog.
-                  └── No  → 🐍 It is a Snake.
-
+- 🟡 **Q1: Does it have feathers?**
+  - ✅ **Yes** → **Q2: Can it fly?**
+    - ✅ **Yes** → **Q3: Does it chirp?**
+      - ✅ **Yes** → 🐦 It is a **Sparrow**
+      - ❌ **No** → 🦅 It is a **Hawk**
+    - ❌ **No** → 🐧 It is a **Penguin**
+  - ❌ **No** → **Q4: Does it have fur?**
+    - ✅ **Yes** → **Q5: Does it bark?**
+      - ✅ **Yes** → 🐶 It is a **Dog**
+      - ❌ **No** → **Q6: Does it meow?**
+        - ✅ **Yes** → 🐱 It is a **Cat**
+        - ❌ **No** → 🐻 It is a **Bear**
+    - ❌ **No** → **Q7: Does it have scales?**
+      - ✅ **Yes** → **Q8: Does it live in water?**
+        - ✅ **Yes** → 🐟 It is a **Fish**
+        - ❌ **No** → 🦎 It is a **Lizard**
+      - ❌ **No** → **Q9: Does it have smooth skin and live near water?**
+        - ✅ **Yes** → 🐸 It is a **Frog**
+        - ❌ **No** → 🐍 It is a **Snake**
 
 ---
 
@@ -66,35 +65,34 @@ Q1: Does it have feathers?
 Sample input and output: 
 
 1. 
-  __Does it have feathers (yes/no): no__
-  __Does it have fur (yes/no): yes__
-  __Does it bark (yes/no): no__
-  __Does it meow (yes/no): no__
-  **It is a Bear.**
+  - _Does it have feathers (yes/no): no_ 
+  - _Does it have fur (yes/no): yes_
+  - _Does it bark (yes/no): no_
+  - _Does it meow (yes/no): no_
+  - **It is a Bear.**
 
 2. 
-  __Does it have feathers (yes/no): yes__
-  __Can it fly (yes/no): yes__
-  __Does it chirp (yes/no): no__
-  **It is a Hawk.**
+  - _Does it have feathers (yes/no): yes_
+  - _Can it fly (yes/no): yes_
+  - _Does it chirp (yes/no): no_
+  - **It is a Hawk.**
 
 3. 
-  __Does it have feathers (yes/no): no__
-  __Does it have fur (yes/no): no__
-  __Does it have scales (yes/no): no__
-  __Does it have smooth skin and live near water (yes/no): no__
-  **It is a Snake.**
+  - _Does it have feathers (yes/no): no_
+  - _Does it have fur (yes/no): no_
+  - _Does it have scales (yes/no): no_
+  - _Does it have smooth skin and live near water (yes/no): no_
+  - **It is a Snake.**
 
 ---
 
 ## Part 4: Reflection
 
 ### Project Overview:
-This project involved designing a practical, rule-based system to recommend recipes based on user inputs. The system uses logical conditions (e.g., exact and partial matches) to evaluate user-provided ingredients against recipes in the dataset.
+The project works by asking a series of yes or no questions. Based from what you choose it will follow that branch and continue to ask more questions until it reaches an answer. This is based off a decision tree to get to the answer. Everything is already predetermined. 
 
 ### Challenges:
-- **Handling Partial Matches:**  
-  Deciding on a threshold (75%) that balances flexibility with accuracy was challenging.
-- **Common Ingredients:**  
-  Ensuring common ingredients like salt and water don’t skew the results. I resolved this by excluding them from the missing ingredient list.
-
+- **Formatting rules in README file:**  
+  I decided to use the rules tree that was provided but the formatting when uploaded at first was very unorganized. I had to be more specific with that I was asking of the AI in order to get what I wanted. That did help to a degree so I ended up having to research how to format in an md file and adjusted it how I wanted.
+- **Number of questions and generalization of animals:**
+  When I first asked the AI to help it gave me what I asked for but there was so little and very generlized. For example one path was Does it have feather->yes, its a bird; no its a penguin. I asked the AI to be more complex and gave more more animals and more branch statements. 
